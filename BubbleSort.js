@@ -1,12 +1,12 @@
 let myArray = [64, 34, 25, 12, 22, 11, 90, 5];
 
 function bubbleSort(arr) {
-    let n = arr.length;
+    // let n = arr.length;
 
     // Outer loop for each pass
-    for (let i = 0; i < n - 1; i++) {
+    for (let i = 0; i < arr.length; i++) {
         // Inner loop for comparing elements
-        for (let j = 0; j < n - i - 1; j++) {
+        for (let j = 0; j < arr.length; j++) {
             // Compare adjacent elements
             if (arr[j] > arr[j + 1]) {
                 // Swap if they are in the wrong order
