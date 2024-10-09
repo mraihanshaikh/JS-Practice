@@ -1,23 +1,15 @@
-let myArray = [64, 34, 25, 12, 22, 11, 90, 5];
+let a = [1002, 0.2, 89, -0.090, 0.987, -0.3, -8]
+let temp;
+console.log("Before Sorting " + a);
 
-function bubbleSort(arr) {
-    // let n = arr.length;
-
-    // Outer loop for each pass
-    for (let i = 0; i < arr.length; i++) {
-        // Inner loop for comparing elements
-        for (let j = 0; j < arr.length; j++) {
-            // Compare adjacent elements
-            if (arr[j] > arr[j + 1]) {
-                // Swap if they are in the wrong order
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
+console.log("After Sorting");
+for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length - i - 1; j++) {
+        if (a[j] > a[j + 1]) {
+            temp = a[j];
+            a[j] = a[j + 1];
+            a[j + 1] = temp;
         }
     }
-    return arr;
 }
-
-let sortedArray = bubbleSort(myArray);
-console.log(sortedArray);  // Output: [5, 11, 12, 22, 25, 34, 64, 90]
+console.log(`${a}`);
